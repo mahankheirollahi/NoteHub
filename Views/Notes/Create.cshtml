@@ -1,0 +1,51 @@
+﻿@model NoteHub.Models.Note
+@using System.Security.Claims
+
+<div class="create-body" ng-app="notehub" ng-controller="HobbiesController">
+<h1 class="create-title">Add a New Note</h1>
+
+    <div ng-controller="HobbiesController">
+        <button class="btn btn-primary create-button" ng-click="getHobbies()">Generate a Random Hobby If You Have Free Time But Not Sure What To Do ?</button>
+        <br />
+        <ul>
+            <li ng-repeat="hobby in hobbies">{{ hobby }}</li>
+        </ul>
+    </div>
+
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="display:none;">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" value="@User.FindFirst(ClaimTypes.NameIdentifier)?.Value" readonly />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="create-form">
+            <div class="form-group">
+                <label asp-for="NoteTitle" class="control-label"></label>
+                <input asp-for="NoteTitle" class="form-control" />
+                <span asp-validation-for="NoteTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group form-description">
+                <label asp-for="NoteDescription" class="control-label"></label>
+                <input asp-for="NoteDescription" class="form-control" />
+                <span asp-validation-for="NoteDescription" class="text-danger"></span>
+            </div>
+            </div>
+            <div class="form-group form-button">
+                <input type="submit" value="Create" class="btn btn-primary create-button" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <br />
+    <a asp-action="Index" style="text-decoration:none">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

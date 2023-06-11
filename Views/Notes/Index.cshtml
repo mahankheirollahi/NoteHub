@@ -1,0 +1,55 @@
+﻿@model IEnumerable<NoteHub.Models.Note>
+
+@{
+    ViewData["Title"] = "Notes";
+}
+
+<div class="notes-body">
+<h1 class="notes-title">@ViewData["Title"]</h1>
+<p>
+    <a asp-action="Create" style="text-decoration:none">Add a New Note</a>
+</p>
+<p id="quote">The Quote of the day: </p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="display:none;">
+                @Html.DisplayNameFor(model => model.UserId)
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Description
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td style="display:none;">
+                @Html.DisplayFor(modelItem => item.UserId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoteTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NoteDescription)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" style=" text-decoration:none">
+                        <i class="fa-solid fa-pen fa-beat fa-xl" style="color: #198754;"></i>
+                </a> 
+                    <a asp-action="Details" asp-route-id="@item.Id" style=" text-decoration:none">
+                        <i class="fa-solid fa-circle-info fa-beat note-icons fa-xl" style="color: #ffd900;"></i>
+                </a> 
+                    <a asp-action="Delete" asp-route-id="@item.Id" style=" text-decoration:none">
+                        <i class="fa-solid fa-trash fa-beat fa-lg" style="color: #ff0000;"></i>
+                </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

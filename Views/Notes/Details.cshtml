@@ -1,0 +1,40 @@
+﻿@model NoteHub.Models.Note
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="details-body">
+    <h1 class="details-title">Details</h1>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2"style="display:none;">
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+        <dd class="col-sm-10" style="display:none;">
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoteTitle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoteTitle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoteDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoteDescription)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id" style="text-decoration:none">
+        <i class="fa-solid fa-pen fa-beat fa-xl" style="color: #198754;"></i>
+    </a>
+    <br>
+    <br>
+    <a asp-action="Index" style="text-decoration:none">
+        <i class="fa-solid fa-arrow-left fa-beat fa-xl" style="color: #ff0000;"></i>
+    </a>
+</div>
