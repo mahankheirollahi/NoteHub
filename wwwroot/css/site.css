@@ -1,0 +1,280 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+
+.hidden{
+    display:none;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-container {
+    margin-top: 60px;
+}
+
+.note-icons {
+    margin: 5px;
+}
+
+.register-login-header {
+    color: #9376E0;
+    font-weight: 700;
+}
+/* Login Page Styles */
+
+.form-floating {
+    margin-bottom: 15px;
+}
+
+#login-submit {
+    background-color: #9376E0 !important;
+    border-color: #9376E0 !important;
+}
+
+.login-checkbox {
+    margin-bottom: 5px !important;
+}
+
+.login-create-account-link {
+    margin-top: 10px;
+}
+
+
+/* Register Page Styles */
+#registerSubmit {
+    background-color: #9376E0 !important;
+    border-color: #9376E0 !important;
+}
+
+
+/* Main Page Styles */
+
+.navbar {
+    background-color: #9376E0 !important;
+}
+
+.navbar-brand {
+    color: white !important;
+}
+
+.text-center {
+    margin-top: 60px;
+}
+
+.main-page-title {
+    color: #9376E0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-page-subtitle {
+    margin-top:30px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-page-description {
+    margin-top: 30px;
+    line-height:50px;
+    text-align: center;
+}
+
+.main-page-feature-title {
+    margin-top: 50px;
+    font-weight: 700;
+    color: #9376E0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-page-features {
+    margin: 50px 0 50px;
+}
+
+.card{
+    margin-left: 8rem;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #9376E0;
+}
+
+.card-img-top {
+    object-fit: cover;
+    width: 17rem;
+    height: 200px;
+}
+
+.card-text {
+    text-align: justify;
+}
+
+
+/* Contact Us Page */
+
+.contact-us {
+    margin-top: 60px;
+    text-align: center;
+}
+.contact-us-title {
+    color: #9376E0;
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-us-subtitle{
+    line-height:2.2rem;
+    font-size: 1.4rem;
+}
+
+.contact-us-email{
+    margin-top: 20px;
+    font-weight:500;
+    font-size: 1.5rem;
+}
+
+/* Create Note Page */
+
+.create-body{
+    margin-top:60px;
+}
+
+.create-title {
+    color: #9376E0;
+    font-weight: 700;
+}
+
+.form-description {
+    margin-top: 10px;
+}
+.form-button {
+    margin-top: 20px;
+}
+
+.create-button {
+    background-color: #9376E0;
+}
+
+/* Notes Main Page */
+
+#quote {
+    color: #9376E0;
+    font-weight: 500;
+}
+
+.notes-body{
+    margin-top:60px;
+}
+
+.notes-title {
+    color: #9376E0;
+    font-weight: 700;
+}
+
+/* Notes Edit Page */
+
+.edit-body{
+    margin-top: 60px;
+}
+
+.edit-notes-title {
+    color: #9376E0;
+    font-weight: 700;
+}
+
+.save-button {
+    background-color: #9376E0;
+}
+
+/* Notes Details Page*/
+
+.details-body{
+    margin-top: 60px;
+}
+
+.details-title {
+    color: #9376E0;
+    font-weight: 700;
+}
+
+/* Notes Delete Page */
+
+.delete-body {
+    margin-top: 60px;
+}
+
+.delete-title {
+    color: red;
+    font-weight: 700;
+}
+
+/* Manage Account Page */
+
+.custom-link.active {
+    margin-top: 5px;
+    background-color: #9376E0 !important;
+}
+
+.manage-account-title {
+    color: #9376E0;
+    font-weight: 700;
+}
+
+.manage-account-body{
+    margin-top: 60px;
+}
+
+/* Change Password Page */
+
+#change-password-form {
+    margin-top: 10px !important;
+}
+
+.submit-button {
+    background-color: #9376E0;
+}
+
+#change-email-button {
+    background-color: #9376E0;
+}
+
+/* Profile Form */
+
+.profile-title {
+    margin-bottom: 20px !important ;
+}
+
+.profile-button {
+    background-color: #9376E0;
+}
+
+
+/* Two Factor Authentication */
+
+.two-factor-buttons {
+    background-color: #9376E0;
+    border-color: #9376E0;
+}
+
+/* Personal */
+
+.personal-button {
+    background-color: #9376E0;
+    border-color: #9376E0;
+}
